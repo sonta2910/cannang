@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chỉ số cân nặng</title>
+</head>
+<h1>Nhập cân nặng và chiều cao của bạn</h1>
+<p>Cân nặng của bạn:</p>
+<input type="number" id="cannang"/>
+<p>Chiều cao của bạn:</p>
+<input type="number" id="chieucao"/>
+<br><br><br>
+<button onclick="tinh()">Kiểm tra</button>
+<p id="KQ"></p>
+<script>
+  function tinh() {
+      let e = +document.getElementById("cannang").value
+      let f = +document.getElementById("chieucao").value
+    let a = Number(e/(f**2)),
+        d
+    if (a < 18.5) {
+      d="Còi xương suy dinh dưỡng"
+    } else if (a < 25) {
+      d="Cân đối"
+    } else if (a < 30) {
+      d="Thừa cân"
+    } else {
+      d="Béo phì"
+    }document.getElementById("KQ").innerHTML="Kết quả của bạn là:"+d
+  }
+
+
+
+</script>
+<body>
+
+</body>
+</html>
